@@ -1,0 +1,25 @@
+# Virtual Environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# AI Models
+models/
+
+# Database
+*.db
+
+# Audio
+*.wav
+*.mp3
+
+# Environment
+.env
+
+# Logs
+logs/
