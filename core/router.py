@@ -13,6 +13,7 @@ from tools.browser import (
     youtube_search,
     github_search,
     linkedin_search,
+    youtube_watch,
 )
 
 from tools.system import (
@@ -92,8 +93,15 @@ def process_command(command):
 
         return f"Searching LinkedIn for {query}."
 
-    # ---------------- Browser ---------------- #
+    elif command.startswith("play "):
 
+        query = command.replace("play", "").replace("on youtube", "").strip()
+
+        youtube_watch(query)
+
+        return f"Playing {query} on YouTube."
+
+    
     elif "google" in command:
         google()
         return "Opening Google."

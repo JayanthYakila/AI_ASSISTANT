@@ -63,3 +63,12 @@ def github_search(query):
 def linkedin_search(query):
     url = f"https://www.linkedin.com/search/results/all/?keywords={quote_plus(query)}"
     return open_url(url)
+
+
+def youtube_watch(query):
+    """
+    Searches YouTube and opens the first result.
+    """
+    url = f"https://www.youtube.com/results?search_query={quote_plus(query)}"
+
+    return open_url(url)
